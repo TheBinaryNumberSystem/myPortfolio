@@ -5,6 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { GithubIcon } from "@/components/Icons";
 import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import dEstate from "../../public/images/projects/dEstate.jpg";
+import usePopcorn from "../../public/images/projects/usePopcorn.jpg";
+import forkify from "../../public/images/projects/forkify.jpg";
+import PigGame from "../../public/images/projects/Pig-Game.jpg";
+import worldwise from "../../public/images/projects/worldwise.jpg";
+import Mapty2 from "../../public/images/projects/Mapty2.jpg";
+import faraway from "../../public/images/projects/faraway.jpg";
 import { motion } from "framer-motion";
 import Transition from "@/components/Transition";
 
@@ -45,9 +52,11 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           </h2>
         </Link>
 
-        <p className="my-2 font-medium text-dark sm:text-sm">{summary}</p>
+        <p className="my-2 font-medium text-dark text-justify sm:text-sm">
+          {summary}
+        </p>
 
-        <div className="mt-2 flex items-center">
+        <div className="mt-2 flex items-center justify-center w-full">
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
           </Link>
@@ -64,6 +73,63 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
     </article>
   );
 };
+
+// const FeaturedProject = ({ type, title, summary, img, link, github }) => {
+//   return (
+//     <article className="w-full flex items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+//       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
+//       <Link
+//         href={link}
+//         target="_blank"
+//         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
+//       >
+//         <FramerImage
+//           src={img}
+//           alt={title}
+//           className="w-full h-auto"
+//           whileHover={{ scale: 1.05 }}
+//           transition={{ duration: 0.2 }}
+//           priority
+//           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+//         />
+//       </Link>
+
+//       <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+//         <span className="text-primary font-medium text-xl xs:text-base">
+//           {type}
+//         </span>
+
+//         <Link
+//           href={link}
+//           target="_blank"
+//           className="hover:underline underline-offset-2"
+//         >
+//           <h2 className="my-2 w-full text-left text-4xl font-bold sm:text-sm">
+//             {title}
+//           </h2>
+//         </Link>
+
+//         <p className="my-2 font-medium text-dark text-justify sm:text-sm">
+//           {summary}
+//         </p>
+
+//         <div className="mt-2 flex items-center">
+//           <Link href={github} target="_blank" className="w-10">
+//             <GithubIcon />
+//           </Link>
+
+//           <Link
+//             href={github}
+//             target="_blank"
+//             className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold sm:px-4 sm:text-base"
+//           >
+//             Visit Project
+//           </Link>
+//         </div>
+//       </div>
+//     </article>
+//   );
+// };
 
 const Project = ({ title, type, img, link, github }) => {
   return (
@@ -124,7 +190,7 @@ function Projects() {
       <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
-            className="text-center mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs: !text-4xl xs:!leading-[4.6rem]"
+            className="text-center mb-16 lg:!text-7xl sm:mb-8 sm:!text-5xl xs: !text-3xl xs:!leading-[4.6rem]"
             text="Imagination Trumps Knowldge!"
           />
 
@@ -132,231 +198,84 @@ function Projects() {
             <div className="col-span-12">
               <FeaturedProject
                 title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc mmmmmmmmmmmmmmm"
+                img={dEstate}
+                summary="Developed a full-stack web application utilizing MERN stack, featuring user authentication, dynamic
+routing, and CRUD operations for listings, ensuring a seamless user experience."
                 type="Featured Project"
-                link="/"
-                github="/"
+                link="https://github.com/TheBinaryNumberSystem/dEstate---A-MERN-Full-Stack-Real-Estate-Application"
+                github="https://github.com/TheBinaryNumberSystem/dEstate---A-MERN-Full-Stack-Real-Estate-Application"
               />
             </div>
+
             <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
+                title="WorldWise - Keep Track of Your Adventures"
+                img={worldwise}
                 summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
                 type="Featured Project"
-                link="/"
-                github="/"
+                link="https://github.com/TheBinaryNumberSystem/WorldWise---Keep_Track_of_Your_Adventures"
+                github="https://github.com/TheBinaryNumberSystem/WorldWise---Keep_Track_of_Your_Adventures"
               />
             </div>
+
             <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
+                title="UsePopcorn"
+                img={usePopcorn}
                 summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
                 type="Featured Project"
-                link="/"
-                github="/"
+                link="https://github.com/TheBinaryNumberSystem/UsePopcorn"
+                github="https://github.com/TheBinaryNumberSystem/UsePopcorn"
               />
             </div>
-            {/* <div className="col-span-12">
-              {" "}
-              <FeaturedProject
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc mmmmmmmmmmmmmmm"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div> */}
+
             <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
+                title="Far Away - Pack Your Backpack"
+                img={faraway}
                 summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
                 type="Featured Project"
-                link="/"
-                github="/"
+                link="https://github.com/TheBinaryNumberSystem/Far_Away---Pack_Your_Backpack"
+                github="https://github.com/TheBinaryNumberSystem/Far_Away---Pack_Your_Backpack"
               />
             </div>
+
             <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
+                title="Forkify - Search Your Favourite Recipe"
+                img={forkify}
                 summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
                 type="Featured Project"
-                link="/"
-                github="/"
+                link="https://github.com/TheBinaryNumberSystem/Forkify---Search_Your_Favourite_Recipe"
+                github="https://github.com/TheBinaryNumberSystem/Forkify---Search_Your_Favourite_Recipe"
               />
             </div>
+
             <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
+                title="Mapty - Map Your Workout"
+                img={Mapty2}
                 summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
                 type="Featured Project"
-                link="/"
-                github="/"
+                link="https://maptybyabhishek.netlify.app/"
+                github="https://github.com/TheBinaryNumberSystem/Mapty---Map_Your_Workout"
               />
             </div>
+
             <div className="col-span-6 sm:col-span-12">
               {" "}
               <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
+                title="Pig-Game"
+                img={PigGame}
                 summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
                 type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              {" "}
-              <Project
-                title="dEstate: A MERN Full Stack Real Estate Application"
-                img={project1}
-                summary="Loremgggggggggggg ddddddddddddd ddddd sssssssssssssssss aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccc"
-                type="Featured Project"
-                link="/"
-                github="/"
+                link="https://pig-gamebyabhishek.netlify.app/"
+                github="https://github.com/TheBinaryNumberSystem/Pig-Game"
               />
             </div>
           </div>

@@ -181,15 +181,6 @@ function NavBar() {
           </nav>
 
           <nav className="flex items-center flex-wrap gap-8 justify-between mt-6 bg-blend-color-dodge">
-            {/* <motion.a
-              href="https://github.com/TheBinaryNumberSystem"
-              target={"_blank"}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mx-3 bg-white rounded-full"
-            >
-              <GitHubIcon />
-            </motion.a> */}
             <motion.a
               href="https://github.com/TheBinaryNumberSystem"
               target="_blank"

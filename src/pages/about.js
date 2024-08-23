@@ -37,7 +37,7 @@ function about() {
   return (
     <>
       <Head>
-        <title>about abhishek</title>
+        <title>About Abhishek</title>
         <meta
           name="Abhishek Goswami"
           content="this is the portfolio of abhishek goswami"

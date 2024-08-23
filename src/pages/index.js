@@ -24,7 +24,7 @@ export default function Home() {
               <Image
                 src={aiProfilePic2}
                 alt="Abhishek Goswami"
-                className="w-full h-auto lg:hidden md:inline-block md:w-full"
+                className="w-full h-auto lg:hidden md:inline-block md:w-full sm:!pt-0 xs:!pt-0"
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
@@ -50,9 +50,6 @@ export default function Home() {
                 >
                   résumé <LinkArrow className={"w-5 ml-1"} />
                 </Link>
-                {/* <Link href="mailto:myselfabhi27@gmail.com" target={"_blank"}>
-                  Contact me
-                </Link> */}
               </div>
             </div>
           </div>
